@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.messageT;
+import models.Task;
 import utils.DBUtilT;
 
 /**
@@ -36,7 +36,7 @@ public class NewServletT extends HttpServlet {
         em.getTransaction().begin();
 
         // Messageのインスタンスを生成
-        messageT m = new messageT();
+        Task m = new Task();
 
         // mの各プロパティにデータを代入
         String content = "hello";

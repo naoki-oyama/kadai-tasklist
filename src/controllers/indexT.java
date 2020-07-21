@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.messageT;
+import models.Task;
 import utils.DBUtilT;
 
 /**
@@ -35,7 +35,7 @@ public class indexT extends HttpServlet {
             throws ServletException, IOException {
         EntityManager em = DBUtilT.createEntityManager();
 
-        List<messageT> messages = em.createNamedQuery("getAllMessages", messageT.class)
+        List<Task> messages = em.createNamedQuery("getAllMessages", Task.class)
                 .getResultList();
         response.getWriter().append(Integer.valueOf(messages.size()).toString());
 
