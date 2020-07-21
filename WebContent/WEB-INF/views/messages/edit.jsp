@@ -3,7 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
-        <h2>id : ${message.id} のメッセージ編集ページ</h2>
+     <c:choose>
+            <c:when test="${message != null}">
+        <h2>id : ${message.id} のタスク編集ページ</h2>
 
         <form method="POST" action="${pageContext.request.contextPath}/update">
             <c:import url="_form.jsp" />

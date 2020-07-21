@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <br />
 
-<label for="content">メッセージ</label>
+<label for="content">タスク</label>
 <br />
 <input type="text" name="content" value="${message.content}" />
 <br />
